@@ -13,7 +13,7 @@ import javax.persistence.*;
 public class Courses {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long courseId;
 
     @Column(name = "course_slug_name", nullable = false, length = 40)

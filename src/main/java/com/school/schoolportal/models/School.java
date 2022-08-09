@@ -8,7 +8,7 @@ import javax.persistence.*;
 public class School {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long schoolID;
     @Column(name = "school_name", length = 50)
     private String schoolName;

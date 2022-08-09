@@ -24,4 +24,5 @@ public class GeneralController {
     public List<School> getSchools() {
         return (List<School>) schoolServices.getSchools();
     }
+
 }
