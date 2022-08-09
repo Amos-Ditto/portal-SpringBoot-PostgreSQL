@@ -1,6 +1,8 @@
 package com.school.schoolportal.controllers;
 
 import com.school.schoolportal.models.School;
+import com.school.schoolportal.models.SchoolDepartment;
+import com.school.schoolportal.services.DepartmentServices;
 import com.school.schoolportal.services.SchoolServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,6 +17,9 @@ public class GeneralController {
     @Autowired
     private SchoolServices schoolServices;
 
+    @Autowired
+    private DepartmentServices departmentServices;
+
     @PostMapping({"/school/create"})
     public School createSchools(@RequestBody School school) {
         return schoolServices.createSchool(school);
@@ -25,4 +30,12 @@ public class GeneralController {
         return (List<School>) schoolServices.getSchools();
     }
 
+    @PostMapping({"/school/createDepartment"})
+    public SchoolDepartment createSchoolDepartment(@RequestBody SchoolDepartment schoolDepartment) {
+        return departmentServices.createDepartment(schoolDepartment);
+    }
+    @GetMapping({"/school/departmentList"})
+    public List<SchoolDepartment> getDepartmentList() {
+        return departmentServices.getDepartmentList();
+    }
 }

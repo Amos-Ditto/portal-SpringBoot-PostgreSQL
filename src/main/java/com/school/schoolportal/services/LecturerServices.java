@@ -15,7 +15,7 @@ public class LecturerServices {
         return lecturerRepository.save(lecturer);
     }
 
-    public List getLecturers() {
+    public List<Lecturer> getLecturers() {
         return (List<Lecturer>) lecturerRepository.findAll();
     }
 }
