@@ -12,7 +12,7 @@ import java.sql.Date;
 public class Student {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long studentID;
 
     @Column(name = "registration_number", nullable = false)

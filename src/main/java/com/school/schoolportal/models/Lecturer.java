@@ -14,7 +14,7 @@ import java.sql.Date;
 public class Lecturer {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long lecturerId;
 
     @Column(name = "lecturerENumber", nullable = false)
